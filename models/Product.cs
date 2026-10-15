@@ -11,6 +11,7 @@ namespace phoenix_warehouse.models
         public bool IsAvailable { get; set; } = true;
         public int Quantity { get; set; }
         public DateTime CreatedAt { get; private set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt {get; private set; } = DateTime.UtcNow;
 
         public void UpdateQuantity(int quantity)
         {

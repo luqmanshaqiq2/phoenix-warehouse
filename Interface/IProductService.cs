@@ -9,10 +9,10 @@ namespace phoenix_warehouse.Interface
     public interface IProductService
     {
         Task<Product> Create (Product product);
-        Task<Product> Update (Guid productId, Product product);
-        Task<Product> Delete (Guid productId);
-        Task<Product> Deactivate (Guid productId);
-        Task<Product> Activate(Guid productId);
+        Task<Product?> Update (Guid productId, Product product);
+        Task<Product?> Delete (Guid productId);
+        Task<bool> DeactivateAsync (Guid productId);
+        Task<bool> ActivateAsync(Guid productId);
         
     }
 }
