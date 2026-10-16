@@ -8,6 +8,8 @@ namespace phoenix_warehouse.Interface
 {
     public interface IProductService
     {
+        Task<List<Product>> GetAll();
+        Task<Product?> GetById(Guid productId);
         Task<Product> Create (Product product);
         Task<Product?> Update (Guid productId, Product product);
         Task<Product?> Delete (Guid productId);

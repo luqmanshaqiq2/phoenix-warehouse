@@ -14,6 +14,10 @@ namespace phoenix_warehouse.Service
         private readonly WarehouseDbContext _context;
 
         public ProductService(WarehouseDbContext context) => _context = context;
+
+        public Task<List<Product>> GetAll() => _context.Products.ToListAsync();
+
+        public Task<Product?> GetById(Guid productId) => _context.Products.FindAsync(productId).AsTask();
         
     public async Task<bool> ActivateAsync(Guid productId)
     {

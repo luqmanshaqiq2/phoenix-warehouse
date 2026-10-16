@@ -32,5 +32,12 @@ db access & business logic with edge cases
 
 6. 
 
-## 
+## n + 1 query problem solved
+
+used eager loading with Include()
+for APIs use Select()
+
+7.
+
+
 
